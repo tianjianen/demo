@@ -1,0 +1,47 @@
+import {ArticleHOSTULR} from './config'
+import Axios from 'axios'
+
+export function getNowArticle() {
+	let url = '/article/today'
+
+	let data = {
+		dev: 1
+	}
+
+	return Axios.get(`${ArticleHOSTULR}${url}`, {
+		params: data
+	}).then(res => {
+		return Promise.resolve(res.data)
+	})
+
+}
+
+export function getRadomArticle() {
+	let url = '/article/random'
+
+	let data = {
+		dev: 1
+	}
+	
+	return Axios.get(`${ArticleHOSTULR}${url}`,{
+		params: data
+	}).then(res => {
+		return Promise.resolve(res.data)
+	})
+}
+
+
+export function getPrevArtile(date) {
+	let url = '/article/day';
+
+	let data  = {
+		dev:1,
+		date: date,
+	}
+
+	return Axios.get(`${ArticleHOSTULR}${url}`,{
+		params: data
+	}).then(res => {
+		return Promise.resolve(res.data);
+	})
+}
