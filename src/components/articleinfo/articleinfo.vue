@@ -18,7 +18,7 @@
 			</Cell>
 			<Cell width="6">
 				<div>
-					<Button color="h-btn h-btn-blue" :disabled = "_getNowDate() < nextday" @click="_getNextArtile">后一天</Button>
+					<Button color="h-btn h-btn-blue" :disabled = "_getNowDate() <= parseInt(nextday)" @click="_getNextArtile">后一天</Button>
 				</div>
 			</Cell>
 		</Row>
@@ -98,7 +98,8 @@ export default {
 			this._getArtile();
 			this.$Loading.close();
 		}, 1000);
-		
+		let time = this._getNowDate();
+		console.log(time);
 	}
 }
 </script>
