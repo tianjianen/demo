@@ -1,6 +1,7 @@
 import {ArticleHOSTULR} from './config'
 import Axios from 'axios'
 
+// 获取今天的文章
 export function getNowArticle() {
 	let url = '/article/today'
 
@@ -16,6 +17,7 @@ export function getNowArticle() {
 
 }
 
+// 获取随机一天的文章
 export function getRadomArticle() {
 	let url = '/article/random'
 
@@ -31,6 +33,7 @@ export function getRadomArticle() {
 }
 
 
+// 获取指定某天的
 export function getPrevArtile(date) {
 	let url = '/article/day';
 
