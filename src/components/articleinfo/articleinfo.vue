@@ -98,8 +98,6 @@ export default {
 			this._getArtile();
 			this.$Loading.close();
 		}, 1000);
-		let time = this._getNowDate();
-		console.log(time);
 	}
 }
 </script>

@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import  Home from '@/components/home'
 import MVInfo from '@/components/mvinfo/mvinfo'
 import ArticleInfo from '@/components/articleinfo/articleinfo'
+import PictureInfo from '@/components/pictureinfo/pictureinfo'
 
 
 Vue.use(Router)
@@ -29,6 +30,11 @@ export default new Router({
 		path: '/article',
 		name: 'ArticleInfo',
 		component: ArticleInfo
+	},
+	{
+		path: '/picture',
+		name: 'PictureInfo',
+		component: PictureInfo
 	},
 ]
 })

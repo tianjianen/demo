@@ -3,7 +3,7 @@
 		<Row >
 			<Cell width="8" ><div><router-link class="nav" to="/home">电影</router-link></div></Cell>
 			<Cell width="8" ><div><router-link class="nav" to="/article">每日一文</router-link></div></Cell>
-			<Cell width="8" ><div><router-link class="nav" to="/bar">Go to Bar</router-link></div></Cell>
+			<Cell width="8" ><div><router-link class="nav" to="/picture">图片</router-link></div></Cell>
       
       
 		</Row>  

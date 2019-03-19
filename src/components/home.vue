@@ -1,7 +1,7 @@
 <template>
 	<div  class="wrapper" ref="wrapper" >
 		<div class="content" >
-			<div class="h-panel" v-for="(list, index) in mvList" :key="index">
+			<div class="h-panel" v-for="(list, index) in mvList" :key="index" @click="_getmvInfo(list.id)">
 				<div class="h-panel-bar">
 					<span class="h-panel-title" >{{list.title}}</span>
 					
@@ -12,8 +12,8 @@
 				</div>
 				<div class="h-panel-body">
 					<Row :space-x="24">
-						<Cell width="12" >
-							<div @click="_getmvInfo(list.id)">
+						<Cell width="12"  >
+							<div >
 								<img  v-lazy="'https://images.weserv.nl/?url=' + list.images.small" width="150px" :alt="list.title">
 							</div>
 						</Cell>

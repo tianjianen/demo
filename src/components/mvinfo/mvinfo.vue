@@ -45,7 +45,8 @@ import { getMVInfo } from "@/api/released.js";
 export default {
   data() {
     return {
-      mvinfo: ""
+      mvinfo: "",
+      mvId:''
     };
   },
   methods: {
@@ -60,9 +61,18 @@ export default {
   },
   created() {
     if (this.$route.params.id !== undefined) {
+      this.mvId = this.$route.params.id;
       this._getMVInfo(this.$route.params.id);
     }
-  }
+  },
+  // activated() {
+  //   if(this.mvId !== this.$route.params.id) {
+  //     this.mvId = this.$route.params.id;
+  //     this.mvinfo = '';
+
+  //     this._getMVInfo(this.$route.params.id);
+  //   }
+  // }
 };
 </script>
 <style scoped>
